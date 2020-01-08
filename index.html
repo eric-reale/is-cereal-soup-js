@@ -31,7 +31,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container" style="height: 100%">
     <div class="row">
-      <div class="one-half column intro-header" style="margin-top: 25%; text-align: center">
+      <div class="intro-header" style="margin-top: 20%; text-align: center">
         <h2 data-type data-type-min="1" data-type-max="40">Hello there.</h2>
         <p data-type data-type-min="1" data-type-max="50" class="intro-text">I have a question for you. Is cereal soup?</p>
         <div class="buttons-div intro-buttons">
@@ -113,7 +113,7 @@ function checkQuestionNumber(number, newDiv, textValue) {
 
 function createContainerDiv(parentParentElement, parentElement, textValue) {
   const newDiv = document.createElement("div");
-  const divClassList = ["one-half", "column", "intro-header"];
+  const divClassList = ["intro-header"];
   divClassList.forEach(function(classList) {
     newDiv.classList.add(classList);
   });
@@ -122,7 +122,7 @@ function createContainerDiv(parentParentElement, parentElement, textValue) {
   parentParentElement.insertAdjacentElement('afterend', newDiv);
 
   questionNumber += 1;
-  console.log(questionNumber);
+  // console.log(questionNumber);
   checkQuestionNumber(questionNumber, newDiv, textValue);
 }
 
